@@ -1,0 +1,18 @@
+@DocumentManagement.Api_HostAddress = http://localhost:5064
+
+### List documents
+GET {{DocumentManagement.Api_HostAddress}}/api/documents
+Accept: application/json
+
+###
+
+### Upload a document (replace the file path)
+POST {{DocumentManagement.Api_HostAddress}}/api/documents
+Content-Type: multipart/form-data; boundary=DocumentBoundary
+
+--DocumentBoundary
+Content-Disposition: form-data; name="file"; filename="sample.txt"
+Content-Type: text/plain
+
+< C:\path\to\sample.txt
+--DocumentBoundary--

@@ -1,0 +1,19 @@
+# Build output
+**/bin/
+**/obj/
+.vs/
+*.user
+*.suo
+
+# Local configuration and credentials
+.env
+.env.*
+!.env.example
+**/appsettings.json
+**/appsettings.*.json
+!**/appsettings.example.json
+
+# Uploaded content and test output
+src/DocumentManagement.Api/App_Data/
+TestResults/
+test-results/
